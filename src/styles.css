@@ -1,3 +1,9 @@
+*{
+  font-family: "Iosevka Charon", monospace;
+  font-weight: 300;
+  font-style: normal;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -9,15 +15,63 @@ nav > ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  height: 10vh;
 }
 
 nav > ul > li {
   flex: 1 1 auto;
   text-align: center;
+  width: 20vw;
+}
+
+#clock {
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  margin-top: 25vh;
+}
+
+#alarm {
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  margin-top: 30vh;
+}
+
+#stopwatch {
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  margin-top: 25vh;
+}
+
+#timer {
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
+  margin-top: 20vh;
+}
+
+time {
+  font-size: 8vw;
+}
+
+input {
+  font-size: 4vw;
+}
+
+.controls > * {
+  width: 6vw;
+  font-size: xx-large;
+  text-align: center;
 }
 
 main {
+  height: 90vh;
   display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-self: center;
 }
 
 main > section:not(:target) {
