@@ -16,5 +16,10 @@
     "vite": "^7.1.12"
   },
   "private": true,
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@material/web": "^2.4.1",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "rollup": "^4.61.1"
+  }
 }

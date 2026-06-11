@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="src/alarm_24.svg" />
     <title>Time</title>
     <link rel="stylesheet" href="./src/styles.css" />
     <link
@@ -12,16 +13,17 @@
   <body>
     <nav>
       <ul>
-        <li><a href="#clock">Clock</a></li>
-        <li><a href="#alarm">Alarm</a></li>
-        <li><a href="#stopwatch">Stopwatch</a></li>
-        <li><a href="#timer">Timer</a></li>
+        <li><span class="material-icons">schedule</span><a href="#clock">Clock</a></li>
+        <li><span class="material-icons">alarm</span><a href="#alarm">Alarm</a></li>
+        <li><span class="material-icons">timer</span><a href="#stopwatch">Stopwatch</a></li>
+        <li><span class="material-icons">av_timer</span><a href="#timer">Timer</a></li>
       </ul>
     </nav>
     <main>
       <section id="clock">
         <x-clock>
           <time>00:00:00</time>
+          <md-filled-button>Next</md-filled-button>
         </x-clock>
       </section>
       <section id="alarm">
@@ -38,7 +40,7 @@
           </template>
           <section class="items"></section>
           <section class="controls">
-            <button class="add material-icons">add_alarm</button>
+            <button><span class="add material-icons">add_alarm</span></button>
           </section>
         </x-alarm>
       </section>
