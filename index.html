@@ -13,7 +13,7 @@
   <body>
     <nav>
       <ul>
-        <li><span class="material-icons">schedule</span><a href="#clock">Clock</a></li>
+        <li><a href="#clock"><md-elevated-button><span class="material-icons">schedule</span>Clock</md-elevated-button></a></li>
         <li><span class="material-icons">alarm</span><a href="#alarm">Alarm</a></li>
         <li><span class="material-icons">timer</span><a href="#stopwatch">Stopwatch</a></li>
         <li><span class="material-icons">av_timer</span><a href="#timer">Timer</a></li>
@@ -23,7 +23,6 @@
       <section id="clock">
         <x-clock>
           <time>00:00:00</time>
-          <md-filled-button>Next</md-filled-button>
         </x-clock>
       </section>
       <section id="alarm">
@@ -84,5 +83,18 @@
       </section>
     </main>
     <script type="module" src="./src/app.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "@material/web/": "https://esm.run/@material/web/"
+        }
+      }
+    </script>
+    <script type="module">
+      import '@material/web/all.js';
+      import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+  
+      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
   </body>
 </html>
