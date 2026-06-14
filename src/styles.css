@@ -60,12 +60,14 @@ button{
 
 time {
   font-size: 8vw;
-  border-radius: 50px;
+  border-radius: 55px;
+  padding: 0.5vw;
 }
 
 input {
   font-size: 4vw;
-  border-radius: 50px;
+  border-radius: 55px;
+  padding: 0.5vw;
 }
 
 .controls > * {
@@ -109,6 +111,14 @@ main > section:not(:target) {
   body {
     color: #121212e8;
     background: #eeeeee;
+  }
+
+  time {
+    color: #0c1b49;
+  }
+
+  input {
+    background-color: #a7b4d6;
   }
 
   a {
