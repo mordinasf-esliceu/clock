@@ -52,12 +52,20 @@ nav > ul > li {
   margin-top: 20vh;
 }
 
+button{
+  border-radius: 50px;
+  background-color: #c8d3f1;
+  margin-top: 2vh;
+}
+
 time {
   font-size: 8vw;
+  border-radius: 50px;
 }
 
 input {
   font-size: 4vw;
+  border-radius: 50px;
 }
 
 .controls > * {
@@ -76,4 +84,34 @@ main {
 
 main > section:not(:target) {
   display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #eeeeee;
+    background: #121212e8;
+  }
+
+  time {
+    color: #809fff;
+  }
+
+  input {
+    background-color: #c8d3f1;
+  }
+
+  a {
+    color: #809fff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: #121212e8;
+    background: #eeeeee;
+  }
+
+  a {
+    color: #0c1b49;
+  }
 }
