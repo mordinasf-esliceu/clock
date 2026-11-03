@@ -2,12 +2,15 @@ export default class Alarm extends HTMLElement {
   #intervalCallback;
   #intervalId = 0;
 
+  
+
   constructor() {
     super();
     this.addEventListener("click", this);
     this.duration = 60 * 1000;
     this.#intervalCallback = () => {
       this.alarms.forEach((alarm) => {
+        const audio = new Audio(src,Alarm.wav);
         const { value } = alarm.querySelector("input");
         const date =
           new Date(value).getTime() ||
@@ -18,6 +21,7 @@ export default class Alarm extends HTMLElement {
             alarm.setAttribute("ringing", "");
             this.dispatchEvent(
               new CustomEvent("ring", { bubbles: true, detail: alarm }),
+              audio.play
             );
             return;
           }
